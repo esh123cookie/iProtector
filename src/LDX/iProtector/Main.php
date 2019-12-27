@@ -399,6 +399,7 @@ class Main extends PluginBase implements Listener{
 		$block = $event->getBlock();
 		$player = $event->getPlayer();
 		if(!$this->canTouch($player, $block)){
+		 	$player->sendPopup("§7(§c!§7)§c§lYou cannot break blocks here");
 			$event->setCancelled();
 		}
 	}
@@ -421,6 +422,7 @@ class Main extends PluginBase implements Listener{
 			$event->setCancelled();
 		}else{
 			if(!$this->canEdit($player, $block)){
+				$player->sendPopup("§7(§c!§7)§c§lYou cannot break blocks here");
 				$event->setCancelled();
 			}
 		}
@@ -449,6 +451,7 @@ class Main extends PluginBase implements Listener{
 			$event->setCancelled();
 		}else{
 			if(!$this->canEdit($player, $block)){
+				$player->sendPopup("§7(§c!§7)§c§lYou cannot break blocks here");
 				$event->setCancelled();
 			}
 		}
